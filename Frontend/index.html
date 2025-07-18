@@ -1,0 +1,106 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Altech | Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>Altech</h1>
+      <img src="/img.jpg" alt="Altech Logo" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Altech</h2>
+      <p>Your trusted partner in innovative tech solutions.</p>
+      <a href="#services" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>At Altech, we specialize in delivering cutting-edge technology solutions that empower businesses to thrive in a digital-first world. With a strong foundation in digital transformation, process automation, and AI-driven innovation, we help organizations reimagine their operations and stay ahead of industry trends.
+
+Our team of expert engineers, developers, and consultants bring a future-focused mindset to every project—whether it's streamlining workflows, building scalable platforms, or enhancing cybersecurity.
+
+With a commitment to excellence, innovation, and client satisfaction, Altech is not just a service provider—we’re your strategic technology partner.</p>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features</h2>
+    <ul>
+      <li>Cutting-edge technology</li>
+      <li>24/7 Customer Support</li>
+      <li>Scalable solutions for businesses</li>
+    </ul>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>We provide a wide range of tech services including software development, cloud computing, AI solutions, and cybersecurity.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+  <input type="text" name="name" placeholder="Your Name" required /><br />
+  <input type="email" name="email" placeholder="Your Email" required /><br />
+  <textarea name="message" placeholder="Your Message" required></textarea><br />
+  <button type="submit">Send Message</button>
+  <p id="formResponse" style="margin-top: 1rem; color: green; display: none;"></p>
+</form>
+
+     
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Altech. All rights reserved.</p>
+  </footer>
+</body>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Capture values
+    const name = this.name.value.trim();
+    const email = this.email.value.trim();
+    const message = this.message.value.trim();
+
+    // Simple validation (optional)
+    if (!name || !email || !message) {
+      alert("Please fill out all fields.");
+      return;
+    }
+
+    // Simulate form submission (e.g., to a backend or email service)
+    // Here we just show a success message
+    const response = document.getElementById('formResponse');
+    response.textContent = `Thanks, ${name}! Your message has been sent.`;
+    response.style.display = 'block';
+
+    // Optionally clear the form
+    this.reset();
+  });
+</script>
+
+</html>
